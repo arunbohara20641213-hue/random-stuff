@@ -23,6 +23,7 @@ pygame.display.set_caption('Snake Game by Arun - bored dev? press w to start')
 clock = pygame.time.Clock()
 font = pygame.font.SysFont("comicsans", 35)
 score_font = pygame.font.SysFont("comicsans", 25)
+#he he 
 
 def load_highscore():
     if os.path.exists(HIGHSCORE_FILE):
@@ -32,7 +33,7 @@ def load_highscore():
         except:
             return 0
     return 0
-
+# :C
 def save_highscore(score):
     with open(HIGHSCORE_FILE, 'w') as f:
         f.write(str(score))
@@ -56,12 +57,9 @@ def game_loop():
     y_change = 0
     snake = []
     length = 1
-
     food_x = round(random.randrange(0, WIDTH - GRID_SIZE) / GRID_SIZE) * GRID_SIZE
     food_y = round(random.randrange(0, HEIGHT - GRID_SIZE) / GRID_SIZE) * GRID_SIZE
-
     score = 0
-
     while not game_over:
 
         while game_close:
@@ -170,6 +168,7 @@ def game_loop():
 
         pygame.display.update()
         clock.tick(12 if not paused else 60)
+ #alr bruh 
 
     pygame.quit()
     quit()
